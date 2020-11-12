@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="mrendzpc_OnlineStore" uuid="da07a28c-c766-4671-ae09-ed5dd864054d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://103.97.125.254:3306/mrendzpc_OnlineStore</jdbc-url>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<script src="${pageContext.request.contextPath}/template/web/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/web/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/web/js/jquery.nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/web/js/jquery-ui.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/web/js/jquery.slicknav.js"></script>
+<script src="${pageContext.request.contextPath}/template/web/js/mixitup.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/web/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/web/js/main.js"></script>
+<%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>--%>
+<%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--%>
+<script src="${pageContext.request.contextPath}/template/sweetalert/sweetalert2.min.js"></script>

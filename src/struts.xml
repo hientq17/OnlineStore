@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <package name="default" namespace="/" extends="struts-default">
+        <!-- web navigation-->
+        <action name="home-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="homePage">
+            <result name="success">WEB-INF/views/web/home.jsp</result>
+        </action>
+        <action name="category-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="categoryPage">
+            <result name="success">WEB-INF/views/web/category.jsp</result>
+        </action>
+        <action name="cart-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="cartPage">
+            <result name="success">WEB-INF/views/web/cart.jsp</result>
+        </action>
+        <action name="about-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="aboutPage">
+            <result name="success">WEB-INF/views/web/about.jsp</result>
+        </action>
+        <action name="login-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="loginPage">
+            <result name="success">WEB-INF/views/web/login.jsp</result>
+        </action>
+        <action name="signup-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="signupPage">
+            <result name="success">WEB-INF/views/web/signup.jsp</result>
+        </action>
+        <action name="item-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="itemPage">
+            <result name="success">WEB-INF/views/web/item.jsp</result>
+        </action>
+        <action name="checkout-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="checkoutPage">
+            <result name="success">WEB-INF/views/web/checkout.jsp</result>
+        </action>
+        <action name="invoiceDetail-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="invoiceDetailPage">
+            <result name="success">WEB-INF/views/web/invoiceDetail.jsp</result>
+        </action>
+        <action name="warning-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="warningPage">
+            <result name="success">WEB-INF/views/web/warning.jsp</result>
+        </action>
+        <action name="change-password-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="changePasswordPage">
+            <result name="success">WEB-INF/views/web/changePassword.jsp</result>
+        </action>
+        <action name="change-information-page" class="edu.fpt.action.navigation.NavigationActionWeb" method="changeInformationPage">
+            <result name="success">WEB-INF/views/web/changeInformation.jsp</result>
+        </action>
+
+        <!-- admin navigation-->
+        <action name="customer-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="customerPage">
+            <result name="success">WEB-INF/views/admin/customerAdmin.jsp</result>
+        </action>
+        <action name="invoice-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="invoicePage">
+            <result name="success" >WEB-INF/views/admin/invoiceAdmin.jsp</result>
+        </action>
+        <action name="invoiceDetail-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="invoiceDetailPage">
+            <result name="success">WEB-INF/views/admin/invoiceDetailAdmin.jsp</result>
+        </action>
+        <action name="item-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="itemPage">
+            <result name="success">WEB-INF/views/admin/itemAdmin.jsp</result>
+        </action>
+        <action name="itemType-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="itemTypePage">
+            <result name="success">WEB-INF/views/admin/itemTypeAdmin.jsp</result>
+        </action>
+        <action name="warning-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="warningPageAdmin">
+            <result name="success">WEB-INF/views/admin/warningAdmin.jsp</result>
+        </action>
+        <action name="addCustomer-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="addCustomerPageAdmin">
+            <result name="success">WEB-INF/views/admin/addCustomerAdmin.jsp</result>
+        </action>
+        <action name="addItem-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="addItemPageAdmin">
+            <result name="success">WEB-INF/views/admin/addItemAdmin.jsp</result>
+        </action>
+        <action name="addItemType-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="addItemTypePageAdmin">
+            <result name="success">WEB-INF/views/admin/addItemTypeAdmin.jsp</result>
+        </action>
+        <action name="editCustomer-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="editCustomerPageAdmin">
+            <result name="success">WEB-INF/views/admin/editCustomerAdmin.jsp</result>
+        </action>
+        <action name="editItem-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="editItemPageAdmin">
+            <result name="success">WEB-INF/views/admin/editItemAdmin.jsp</result>
+        </action>
+        <action name="editItemType-page-admin" class="edu.fpt.action.navigation.NavigationActionAdmin" method="editItemTypePageAdmin">
+            <result name="success">WEB-INF/views/admin/editItemTypeAdmin.jsp</result>
+        </action>
+
+        <!-- web action -->
+        <action name="login" class="edu.fpt.action.web.LoginAction" method="login">
+            <result name="web" type="redirect">home-page</result>
+            <result name="admin" type="redirect">customer-page-admin</result>
+            <result name="input">WEB-INF/views/web/login.jsp</result>
+        </action>
+        <action name="logout" class="edu.fpt.action.web.LogoutAction" method="logout">
+            <result name="success" type="redirect">home-page</result>
+        </action>
+        <action name="signup" class="edu.fpt.action.web.SignupAction">
+            <result name="success">WEB-INF/views/web/login.jsp</result>
+            <result name="input">WEB-INF/views/web/signup.jsp</result>
+        </action>
+        <action name="checkout" class="edu.fpt.action.web.CheckoutAction">
+            <result name="success" type="redirect">cart-page</result>
+        </action>
+        <action name="change-password" class="edu.fpt.action.web.ChangePassword" method="changePassword">
+            <result name="success" type="redirect">logout</result>
+            <result name="input">WEB-INF/views/web/changePassword.jsp</result>
+        </action>
+        <action name="change-information" class="edu.fpt.action.web.ChangeInformation" method="changeInformation">
+            <result name="success" type="redirect">home-page</result>
+            <result name="input">WEB-INF/views/web/changeInformation.jsp</result>
+        </action>
+
+        <!-- admin action -->
+        <action name="add-customer" class="edu.fpt.action.admin.AddNewCustomerAction">
+            <result name="success" type="redirect">customer-page-admin</result>
+            <result name="input">WEB-INF/views/admin/addCustomerAdmin.jsp</result>
+        </action>
+        <action name="edit-customer" class="edu.fpt.action.admin.EditCustomerAction">
+            <result name="success" type="redirect">customer-page-admin</result>
+            <result name="input">WEB-INF/views/admin/editCustomerAdmin.jsp</result>
+        </action>
+        <action name="add-item" class="edu.fpt.action.admin.AddNewItemAction">
+            <result name="success" type="redirect">item-page-admin</result>
+            <result name="input">WEB-INF/views/admin/addItemAdmin.jsp</result>
+        </action>
+        <action name="edit-item" class="edu.fpt.action.admin.EditItemAction">
+            <result name="success" type="redirect">item-page-admin</result>
+            <result name="input">WEB-INF/views/admin/editItemAdmin.jsp</result>
+        </action>
+        <action name="add-itemType" class="edu.fpt.action.admin.AddNewItemTypeAction">
+            <result name="success" type="redirect">itemType-page-admin</result>
+            <result name="input">WEB-INF/views/admin/addItemTypeAdmin.jsp</result>
+        </action>
+        <action name="edit-itemType" class="edu.fpt.action.admin.EditItemTypeAction">
+            <result name="success" type="redirect">itemType-page-admin</result>
+        </action>
+
+        <!-- ajax action -->
+        <action name="get-customer-information" class="edu.fpt.action.ajax.CustomerAction" method="getCustomer">
+            <result name="success">WEB-INF/views/ajax/web/customerInformation.jsp</result>
+        </action>
+        <action name="list-invoice-admin" class="edu.fpt.action.ajax.InvoiceAdminAction" method="getList">
+            <result name="success">WEB-INF/views/ajax/admin/listInvoices.jsp</result>
+        </action>
+        <action name="confirm-invoice" class="edu.fpt.action.ajax.InvoiceAdminAction" method="confirm">
+            <result name="success">WEB-INF/views/ajax/admin/listInvoices.jsp</result>
+        </action>
+        <action name="remove-customer" class="edu.fpt.action.ajax.CustomerAdminAction" method="removeCustomer">
+            <result name="success">WEB-INF/views/ajax/admin/listCustomers.jsp</result>
+        </action>
+        <action name="remove-item" class="edu.fpt.action.ajax.ItemAdminAction" method="removeItem">
+            <result name="success">WEB-INF/views/ajax/admin/listItems.jsp</result>
+        </action>
+        <action name="sort-items" class="edu.fpt.action.ajax.ItemAdminAction" method="sortItems">
+            <result name="success">WEB-INF/views/ajax/admin/listItems.jsp</result>
+        </action>
+        <action name="remove-itemType" class="edu.fpt.action.ajax.ItemTypeAdminAction" method="removeItemType">
+            <result name="success">WEB-INF/views/ajax/admin/listItemTypes.jsp</result>
+        </action>
+        <action name="advanced-category-page" class="edu.fpt.action.ajax.CategoryAction" method="advancedCategory">
+            <result name="success">WEB-INF/views/ajax/web/listCategories.jsp</result>
+        </action>
+        <action name="add-cart" class="edu.fpt.action.ajax.CartAction" method="addCart">
+            <result name="success" type="httpheader">
+                <param name="status">200</param>
+            </result>
+        </action>
+        <action name="delete-cart" class="edu.fpt.action.ajax.CartAction" method="deleteCart">
+            <result name="success">WEB-INF/views/ajax/web/listCarts.jsp</result>
+        </action>
+        <action name="update-cart" class="edu.fpt.action.ajax.CartAction" method="updateCart">
+            <result name="success">WEB-INF/views/ajax/web/listCarts.jsp</result>
+        </action>
+        <action name="cancel-invoice" class="edu.fpt.action.ajax.InvoiceAction" method="cancelInvoice">
+            <result name="success">WEB-INF/views/ajax/web/listInvoices.jsp</result>
+        </action>
+    </package>
+
+</struts>
